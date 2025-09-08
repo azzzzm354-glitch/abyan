@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Scroll Terpisah Separuh Halaman</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+}
+
+    body {
+      display: flex;
+      height: 100vh; /* Tinggi penuh layar */
+}
+
+.panel {
+      width: 50vw;         /* Separuh lebar layar */
+      height: 100vh;        /* Tinggi penuh layar */
+      overflow-y: scroll;   /* Scroll vertikal */
+      padding: 20px;
+      border-right: 1px solid #ccc;
+}
+
+.panel:last-child {
+      border-right: none;
+}
+
+.content {
+      height: 200vh;        /* Konten lebih tinggi agar bisa discroll */
+      background: linear-gradient(to bottom, #e66465, #9198e5);
+      padding: 10px;
+      color: white;
+}
+  </style>
+</head>
+<body>
+
+  <div class="panel">
+    <div class="content">
+      <h2>Panel Kiri</h2>
+      <p>Scroll ke bawah untuk melihat konten di panel kiri.</p>
+      <p>Tambahkan konten sebanyak yang kamu mau di sini...</p>
+    </div>
+  </div>
+
+  <div class="panel">
+    <div class="content">
+      <h2>Panel Kanan</h2>
+      <p>Scroll ke bawah untuk melihat konten di panel kanan.</p>
+      <p>Konten di sini bisa berbeda dari panel kiri.</p>
+    </div>
+  </div>
+
+</body>
+</html>
